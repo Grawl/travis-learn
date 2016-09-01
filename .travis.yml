@@ -6,4 +6,8 @@ cache:
   - node_modules
 install:
   - npm i
-script: node node_modules/.bin/gulp
+script:
+  - node node_modules/.bin/gulp
+  - git status
+addons:
+  artifacts: true
