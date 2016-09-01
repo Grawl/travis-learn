@@ -5,6 +5,10 @@ cache:
   directories:
   - node_modules
 script:
+  - git status
   - git checkout master
-  - git add .
+  - git status
   - npm run gulp
+  - git status
+  - git add .
+  - git status
