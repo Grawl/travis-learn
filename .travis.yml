@@ -7,5 +7,3 @@ cache:
 install:
   - npm i
 script: node node_modules/.bin/gulp
-addons:
-  artifacts: true
