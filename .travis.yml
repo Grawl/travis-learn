@@ -5,13 +5,10 @@ cache:
   directories:
   - node_modules
 script:
-  - git status
   - git checkout master
-  - git status
   - npm run gulp
-  - git status
+  - if [ -z `git diff --exit-code` ]; then echo "No changes to the output on this push; exiting." exit 0 fi
   - git add .
-  - git status
   - git remote add deployment https://$USER:$PASSWORD@github.com/Grawl/travis-learn.git
   - git config user.name "Travis CI"
   - git commit -m "Travis CI $TRAVIS_COMMIT"
