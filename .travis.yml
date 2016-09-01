@@ -14,5 +14,5 @@ script:
   - git status
   - git remote add deployment https://$USER:$PASSWORD@github.com/Grawl/travis-learn.git
   - git config user.name "Travis CI"
-  - git commit -m "Travis CI ${SHA}"
+  - git commit -m "Travis CI $SHA"
   - git push -u deployment master
