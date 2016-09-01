@@ -7,7 +7,7 @@
     "index.min.js.map"
   ],
   "scripts": {
-    "test": "node node_modules/.bin/gulp"
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",

@@ -1,13 +1,10 @@
 language: node_js
 node_js:
-  - "6"
+  - "stable"
 cache:
   directories:
   - node_modules
-install:
-  - npm i
 script:
-  - node node_modules/.bin/gulp
-  - git status
-addons:
-  artifacts: true
+  - git checkout master
+  - git add .
+  - npm run gulp
