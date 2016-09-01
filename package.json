@@ -2,6 +2,10 @@
   "name": "travis-learn",
   "version": "1.0.0",
   "description": "Learn how Travis CI works",
+  "main": [
+    "index.min.js",
+    "index.min.js.map"
+  ],
   "scripts": {
     "test": "node node_modules/.bin/gulp"
   },
