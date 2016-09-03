@@ -15,7 +15,7 @@ if [ -z `git diff --exit-code` ]; then
     exit 0
 fi
 git add .
-git remote add deployment https://$USER:$PASSWORD@github.com/Grawl/travis-learn.git
+git remote add deployment https://$USER:$PASSWORD@github.com/$TRAVIS_REPO_SLUG.git
 git config user.name "Travis CI"
 git commit -m "Travis CI $TRAVIS_COMMIT"
 git push -u deployment master
