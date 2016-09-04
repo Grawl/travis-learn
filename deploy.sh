@@ -56,7 +56,6 @@ if [[ `git status --porcelain` ]]; then
 		echo "You can set up SOURCE_BRANCH environment variable in Travis CI project settings: ${SETTINGS_URL}"
 		# You can skip defining this variable if you want to deploy from master branch
 		SOURCE_BRANCH=$TRAVIS_BRANCH # the branch
-		exit 0
 	fi
 	if [ ! "$TARGET_BRANCH" ]; then
 		echo "You are not provided a target git branch; using 'master' as a default."
@@ -64,7 +63,6 @@ if [[ `git status --porcelain` ]]; then
 		# You can skip defining this variable if you want to deploy to master branch
 		# TODO: add specific behaviour if SOURCE_BRANCH != TARGET_BRANCH (gh-pages for example)
 		TARGET_BRANCH=$TRAVIS_BRANCH # the branch
-		exit 0
 	fi
 	# Build HTTPS git remote from Travis CI project environment variables
 	git remote add deployment https://${GIT_USER}:${GIT_PASSWORD}@${GIT_HOST}/${TRAVIS_REPO_SLUG}.git
