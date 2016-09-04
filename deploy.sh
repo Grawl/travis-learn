@@ -22,7 +22,7 @@ function build {
 # I am using some Travis environment variables like `TRAVIS` or `TRAVIS_COMMIT` here, you can look their output in [Travis CI Documentation](https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables)
 
 set -e # Exit with nonzero exit code if anything fails
-set -x # Debug mode on
+# set -x # Enable debug mode. It will print every executed line into log. Do not forget to clear any public logs after debug build that prints your sensitive data like passwords!
 if [ ! "$TRAVIS" ]; then
 	echo "This script should work only on Travis CI server"
 	# Remove this code if you want to debug this script
