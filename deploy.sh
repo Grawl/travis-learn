@@ -9,8 +9,9 @@
 # Don't worry, [you can trust Travis](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings)
 # Also, you have to add `.travis.yml` file with this:
 
-# script: bash ./build.sh #for example
-# after_success: bash ./deploy.sh
+# script:
+#  - bash ./build.sh #for example
+#  - bash ./deploy.sh
 
 # Configuring Travis CI [is not hard](https://docs.travis-ci.com/user/getting-started/), just few lines and you are a pilot!
 
