@@ -10,7 +10,7 @@
 # Also, you have to add `.travis.yml` file with this:
 
 # script: bash ./build.sh #for example
-# deploy: bash ./deploy.sh
+# after_success: bash ./deploy.sh
 
 # Configuring Travis CI [is not hard](https://docs.travis-ci.com/user/getting-started/), just few lines and you are a pilot!
 
