@@ -13,7 +13,7 @@
 
 # Configuring Travis CI [is not hard](https://docs.travis-ci.com/user/getting-started/), just few lines and you are a pilot!
 
-# And after, you should change this function to wnat you want to do to build your project:
+# And after, you should change this function to what you want to do to build your project:
 # TODO: use `bash ./build.sh` here
 function build {
 	npm run gulp
@@ -23,7 +23,7 @@ function build {
 
 set -e # Exit with nonzero exit code if anything fails
 if [ ! "$TRAVIS" ]; then
-	# This script should work only on Travis CI server
+	echo "This script should work only on Travis CI server"
 	# Remove this code if you want to debug this script
 	exit 0
 fi
@@ -66,7 +66,8 @@ if [ ! "$TARGET_BRANCH" ]; then
 	echo ">> TARGET_BRANCH=$TRAVIS_BRANCH" #debug
 	TARGET_BRANCH=$TRAVIS_BRANCH
 fi
-# If we want to deploy, we want to push. So let's checkout from detached HEAD into source branch:
+# If we want to deploy, we want to push. But Travis CI doing `git checkout -qf ${TRAVIS_COMMIT}` and there comes a detached HEAD. I don't want to figure out this shit, just let's checkout from detached HEAD into source branch.
+echo ">> TRAVIS_COMMIT: ${TRAVIS_COMMIT}" #debug
 echo ">> git checkout ${SOURCE_BRANCH}" #debug
 git checkout ${SOURCE_BRANCH}
 # Now let's build our project to know if there are will be any changes:
