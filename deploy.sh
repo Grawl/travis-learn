@@ -13,10 +13,9 @@
 
 # Configuring Travis CI [is not hard](https://docs.travis-ci.com/user/getting-started/), just few lines and you are a pilot!
 
-# And after, you should change this function to what you want to do to build your project:
-# TODO: use `bash ./build.sh` here
+# And after, you can change this function to what you want to do to build your project:
 function build {
-	npm run gulp
+	bash ./build.sh
 }
 
 # I am using some Travis environment variables like `TRAVIS` or `TRAVIS_COMMIT` here, you can look their output in [Travis CI Documentation](https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables)
