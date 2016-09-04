@@ -4,4 +4,5 @@ node_js:
 cache:
   directories:
   - node_modules
-script: bash ./deploy.sh
+script: npm run gulp
+deploy: bash ./deploy.sh
