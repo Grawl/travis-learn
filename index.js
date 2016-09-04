@@ -3,4 +3,4 @@ window.jQuery = window.$
 const hello = world=> {
     $('html').after(world)
 }
-hello("<p>Hello, beautiful world!</p>")
+hello("<p>Hello, strange world!</p>")
