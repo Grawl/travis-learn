@@ -15,6 +15,7 @@ if [ ! "$TRAVIS" ]; then
 	# Remove this code if you want to debug this script
 	exit 0
 fi
+echo TRAVIS_BRANCH
 SOURCE_BRANCH=$TRAVIS_BRANCH
 TARGET_BRANCH=$TRAVIS_BRANCH # TODO: add specific behaviour if SOURCE_BRANCH != TARGET_BRANCH (gh-pages for example)
 # Pull requests shouldn't try to deploy, just build to verify
